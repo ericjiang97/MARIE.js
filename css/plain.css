@@ -517,3 +517,7 @@ codeblock {
   margin-top: 5px;
   margin-right: 0px;
 }
+
+.simComponents{
+  resize: both;
+}

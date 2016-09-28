@@ -1,6 +1,6 @@
 / Multiplication Calculator
 / by the MARIE.js Team
-/ Copyright (C) 2016. Licensed under the MIT License 
+/ Copyright (C) 2016. Licensed under the MIT License
 
 / Prompt user to type in integers
 INPUT
@@ -21,7 +21,7 @@ loop,    Load num
          Jump loop / no; repeat loop
          / yes, so exit the loop
 
-/ Output result to user then halt program         
+/ Output result to user then halt program
 Load num
 Output
 Halt

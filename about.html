@@ -18,6 +18,7 @@
         <link href="css/sdialog.css" rel="stylesheet" type="text/css">
         <link href="css/plain.css" rel="stylesheet" type="text/css">
         <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+        <link href="css/nprogress.css" rel="stylesheet" type="text/css">
 
         <link href="css/codemirror.css" rel="stylesheet" type="text/css">
         <link href="css/codemirrorDracula.css" rel="stylesheet" type="text/css">
@@ -56,7 +57,7 @@
               <li class="divider"></li>
               <li><a href="https://github.com/MARIE-js/MARIE.js/wiki/Frequently-Asked-Questions-(FAQs)" target="_blank"><span class="fa fa-question"></span> FAQs </a></li>
               <li><a href="https://github.com/MARIE-js/MARIE.js/wiki" target="_blank"><span class="fa fa-book"></span> Wiki </a></li>
-              <li><a href="book.pdf" target="_blank"><span class="fa fa-book"></span> Download eBook (PDF) </a></li>
+              <li><a href="book.pdf" target="_blank"><span class="fa fa-book"></span> Get eBook </a></li>
               <li><a href="https://github.com/MARIE-js/MARIE.js/wiki/MARIE-Instruction-Set-(with-Opcodes)" target="_blank"><span class="fa fa-info"></span> Instruction Set </a></li>
               <li class="divider"></li>
               <li><a href="https://gitreports.com/issue/MARIE-js/MARIE.js/" target="_blank"><span class="fa fa-bug"></span> Report an Issue</a></li>
@@ -65,7 +66,7 @@
       </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="https://github.com/MARIE-js/MARIE.js"><span class="fa fa-github"></span></a></li>
+        <li><a href="https://github.com/MARIE-js/MARIE.js" target="_blank"><span class="fa fa-github"></span></a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container-fluid -->
@@ -74,7 +75,7 @@
 
         <main>
             <div id="about" class="container">
-				<h1 class="center">MARIE.js <span class="version">v1.00.0</span></h1>
+				<h1 class="center">MARIE.js <span class="version">v1.0.0</span></h1>
 				<h2>About MARIE</h2>
 				<p>MARIE ('Machine Architecture that is Really Intuitive and Easy') is a machine architecture and assembly language from <a href="https://books.google.com.au/books/about/The_Essentials_of_Computer_Organization.html?id=3kQoAwAAQBAJ&redir_esc=y" target="_blank">The Essentials of Computer Organization and Architecture</a> (Linda Null, Julia Lobur). The publisher provides a set of <a href="http://computerscience.jbpub.com/ecoa/3e/simulators.aspx">simulators for the machine</a>, written in Java. However, since using simulators can be rather difficult, we have implemented a web-based version, so that students are able to access it readily and easily. Since beginning the project we have added many features such as importing and exporting of Marie Assembly Source files (*.mas) to provide compatibility with the existing simulators.</p>
                 <br>
@@ -107,7 +108,22 @@
 					<em>Designed for <strong>FIT1047</strong>: Introduction to Computers, Networks and Security.</em>
 				</p>
 			</div>
-        </main>
+              <!-- Version Modal -->
+              <div class="modal fade " id="currentVersion" role="dialog" data-keyboard="true" tabindex="-1">
+                  <div class="modal-dialog">
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h4 class="modal-title">MARIE.js | Current Version</h4>
+                          </div>
+                          <div class="modal-body">
+                              <p>This version is: v1.0.0-Beta</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+    </main>
+
         <footer>
             <div class="container" style="padding: 0 0">
             </div>
