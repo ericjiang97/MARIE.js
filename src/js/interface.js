@@ -426,15 +426,19 @@ window.addEventListener("load", function() {
     function convertOutput(value) {
         switch(outputType) {
             case HEX:
-                return Utility.hex(value);
+                return document.createTextNode(Utility.hex(value));
             case DEC:
-                return value;
+                return document.createTextNode(value);
             case UNICODE:
-                return String.fromCharCode(value);
+                if (value===10) {
+                  return document.createElement("br");
+                } else {
+                  return document.createTextNode(String.fromCharCode(value));
+                }
             case BIN:
-                return Utility.uintToBinGroup(value, 16, prefs.binaryStringGroupLength);
+                return document.createTextNode(Utility.uintToBinGroup(value, 16, prefs.binaryStringGroupLength));
             default:
-                return "Invalid output type.";
+                return document.createTextNode("Invalid output type.");
         }
     }
 
@@ -444,8 +448,10 @@ window.addEventListener("load", function() {
         }
 
         for(var i = 0; i < outputList.length; i++) {
-            outputLog.appendChild(document.createTextNode(convertOutput(outputList[i])));
-            outputLog.appendChild(document.createElement("br"));
+            outputLog.appendChild(convertOutput(outputList[i]));
+            if (outputType!==UNICODE) {
+              outputLog.appendChild(document.createElement("br"));
+            }
         }
     }
 
@@ -759,8 +765,10 @@ window.addEventListener("load", function() {
 
         outputList.push(value);
 
-        outputLog.appendChild(document.createTextNode(convertOutput(value)));
-        outputLog.appendChild(document.createElement("br"));
+        outputLog.appendChild(convertOutput(value));
+        if (outputType!==UNICODE) {
+          outputLog.appendChild(document.createElement("br"));
+        }
 
         if(shouldScrollToBottomOutputLog) {
             outputLog.scrollTop = outputLog.scrollHeight;
